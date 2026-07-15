@@ -39,3 +39,4 @@ If you wish to add your RPC, please submit a PR modifying [constants/extraRpcs.j
 The following API returns all the data in our website, including chain data along with all of their RPCs:
 
 https://chainlist.org/rpcs.json
+

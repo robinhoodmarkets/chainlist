@@ -39,3 +39,15 @@ If you wish to add your RPC, please submit a PR modifying [constants/extraRpcs.j
 The following API returns all the data in our website, including chain data along with all of their RPCs:
 
 https://chainlist.org/rpcs.json
+
+## Verifying your RPC connection
+
+Before submitting a PR, verify your RPC endpoint is publicly reachable and returns correct chain data:
+
+```bash
+curl -s -X POST <your-rpc-url> \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}'
+```
+
+The `result` field should match the `chainId` in your submission file.
